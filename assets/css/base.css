@@ -170,8 +170,12 @@ header > div.menu .menu-item:last-child{
     background-position: left 9.5px;
     padding-left: 18px;
     position: relative;
-    min-height: 40px;
 }
+.cell-group.no-bracket{
+    background: none;
+    min-height: auto !important;
+}
+
 .cell-group > .iconify{
     position: absolute;
     left: -1px;
@@ -198,6 +202,27 @@ header > div.menu .menu-item:last-child{
     vertical-align: middle;
 }
 
+.cell-group.large a{
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.cell-group.large a.item-top{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.cell-group.large a:last-child{
+    line-height: 24px;
+}
+
+.cell-group.large .cell-item .iconify{
+    margin-right: 5px;
+    font-size: 16px;
+    vertical-align: inherit;
+}
+
 .doc-history-row > .row-right{
     grid-column-start: 8;
     grid-column-end: 13;
@@ -205,6 +230,8 @@ header > div.menu .menu-item:last-child{
     text-align: right;
     padding: 20px 0;
 } 
+
+
 
 
 .doc-history-row > .row-right  .approved{
@@ -319,16 +346,22 @@ header > div.menu .menu-item:last-child{
 .modal .modal-body {
     margin: auto 70px;
 }
-.modal .modal-body .modal-msg{
-    margin: 41px auto 0 auto;
+
+.modal .body-row{
     font-weight: 400;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 24px;
 }
 
-.modal .modal-body .modal-msg strong{
+.modal .body-row strong{
     font-weight: 700;
 }
+
+.modal .modal-body .modal-msg{
+    margin: 41px auto 0 auto;
+}
+
+
 
 .modal .modal-body .userinput{
     margin: 19px auto 0 auto;
@@ -412,4 +445,32 @@ header > div.menu .menu-item:last-child{
 .cta-warning:hover{
     background-color: #8b5b1d;
     text-decoration: none;
+}
+
+
+/* typo  */
+.mt31{
+    margin-top: 31px !important;
+}
+.mt11{
+    margin-top: 11px !important;
+}
+
+.mt12{
+    margin-top: 12px !important;
+}
+
+.pt0{
+    padding-top: 0px !important;
+}
+.pb22{
+    padding-bottom: 22px !important;
+}
+.pb0{
+    padding-bottom: 0px !important;
+}
+
+.mhz40{
+    margin-left: 40px !important;
+    margin-right: 40px !important;
 }
