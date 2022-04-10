@@ -270,7 +270,45 @@
                                 </div>
 
                                 <div class="body-row cta-row">
-                                    <a href="#" class="cta cta-warning">Confirm</a>
+                                    <a href="#" class="cta cta-warning open-confirm-part2">Confirm</a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--modal:end-->
+
+            <!--modal:start-->
+            <div class="modal confirm-part2">
+                <div class="modal-parent">
+                    <div class="modal-container">
+                        <div class="modal-dialog pb0">
+                            <div class="modal-title main-text-strong">
+                                Are you sure?
+                                <span class="close"><span class="iconify" data-icon="ep:close-bold"></span></span>
+                            </div>
+
+                            <div class="modal-body mt12 pt0 pb22">
+                                <div class="body-row main-text">
+                                    You are declaring that the following pull request
+                                </div>
+                                <div class="body-row mt31">
+                                    <div class="cell-group no-bracket large modal-item">
+                                        <a href="#" class="cell-item main-text-strong"><span class="iconify" data-icon="octicon:code-16"></span>#222  Code PR Name</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="body-row modal-msg mt11 main-text">
+                                    does not need any associated documentation.
+                                    <br/><br/>Use this only to do Documentation for deployed code, or improve existing documentation
+
+                                </div>
+
+                                <div class="body-row cta-row">
+                                    <a href="#" class="cta cta-warning close-confirm-part2">Confirm</a>
                                 </div>
 
 
@@ -291,12 +329,16 @@
     $(".cell-item").click(function(){
         $(".get-approval").addClass('opened');
     });
-    $(".close").click(function(){
+    $(".close,.close-confirm-part2").click(function(){
         $(".modal").removeClass('opened');
     });
     $(".open-confirm-part1").click(function(){
         $(".get-approval").removeClass('opened');
         $(".confirm-part1").addClass("opened");
+    });
+    $(".open-confirm-part2").click(function(){
+        $(".confirm-part1").removeClass("opened");
+        $(".confirm-part2").addClass("opened");
     });
 
 </script>
