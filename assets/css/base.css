@@ -154,16 +154,26 @@ header > div.menu .menu-item:last-child{
     grid-template-columns: repeat(12, minmax(0,1fr));
     grid-gap: 32px;
 }
+.dialog-history-row {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+    grid-gap: 32px;
+}
+
 .doc-history .doc-history-row:last-child{
     border-bottom: 0px solid #434547;
 }
-.doc-history-row > .row-left{
+.doc-history-row > .row-left,
+.dialog-history-row > .row-left{
     grid-column-start: 1;
     grid-column-end: 8;
     justify-self: start;
     padding: 20px 0;
 } 
-
+.dialog-history-row > .row-left,
+.dialog-history-row > .row-right{
+    padding: 0px 0 !important;
+}
 .cell-group {
     background: url(../images/square-braket.svg) no-repeat;
     background-size: 16px 23px;
@@ -172,6 +182,7 @@ header > div.menu .menu-item:last-child{
     position: relative;
 }
 .cell-group.no-bracket{
+    padding-left: 0px;
     background: none;
     min-height: auto !important;
 }
@@ -201,7 +212,12 @@ header > div.menu .menu-item:last-child{
     font-size: 16px;
     vertical-align: middle;
 }
-
+.cell-group.no-bracket .cell-item .iconify{
+    margin-right: 16px;
+    font-size: 16px;
+    vertical-align: middle;
+    line-height: 20;
+}
 .cell-group.large a{
     display: block;
     font-size: 20px;
@@ -220,10 +236,12 @@ header > div.menu .menu-item:last-child{
 .cell-group.large .cell-item .iconify{
     margin-right: 5px;
     font-size: 16px;
-    vertical-align: inherit;
+    line-height: 24px;
+    vertical-align: middle;
 }
 
-.doc-history-row > .row-right{
+.doc-history-row > .row-right,
+.dialog-history-row > .row-right{
     grid-column-start: 8;
     grid-column-end: 13;
     justify-self: end;
@@ -292,21 +310,26 @@ header > div.menu .menu-item:last-child{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #141414;
-    border: 1px solid #966220;
-    box-sizing: border-box;
-    box-shadow: 3px 4px 4px #966220;
     border-radius: 8px;
-    width: 614px;
+    min-width: 614px;
     min-height: 100px;
     grid-column-start: 1;
     grid-column-end: 8;
     justify-self: start;
     z-index: 100;
-    text-align: center;
     padding: 12px 0;
 }
-.modal .modal-dialog:before{
+.modal .modal-dialog.large-dialog{
+    min-width: 961px;
+}
+.modal.warning .modal-dialog{
+    background: #141414;
+    border: 1px solid #966220;
+    box-sizing: border-box;
+    box-shadow: 3px 4px 4px #966220;
+    text-align: center;
+}
+.modal.warning .modal-dialog:before{
     content: "";
     width: 100%;
     background: #966220;
@@ -316,8 +339,17 @@ header > div.menu .menu-item:last-child{
     left: 0;
     top: -4px;
 }
+.modal.regular .modal-dialog{
+    background: #141414;
+    border: 1px solid #2DD4BF;
+    box-sizing: border-box;
+    box-shadow: 3px 4px 4px rgba(165, 243, 252, 0.2);
+    border-radius: 8px;
+}
 
-
+.modal.regular .modal-dialog .modal-title{
+    margin-left: 35px;
+}
 .modal .modal-dialog .modal-title{
     font-size: 32px;
     line-height: 44px;
@@ -338,6 +370,7 @@ header > div.menu .menu-item:last-child{
 .modal .modal-body {
     padding: 30px 0 33px 0;
 }
+
 .modal .modal-body .modal-item{
     display: inline-block;
     text-align:left;
@@ -347,6 +380,9 @@ header > div.menu .menu-item:last-child{
     margin: auto 70px;
 }
 
+.modal.regular .modal-body {
+    margin: auto 35px !important;
+}
 .modal .body-row{
     font-weight: 400;
     font-size: 16px;
@@ -361,7 +397,13 @@ header > div.menu .menu-item:last-child{
     margin: 41px auto 0 auto;
 }
 
-
+.modal .body-row.bordered-list{
+    padding: 20px 0;
+    border-bottom: 1px solid #434547;
+}
+.modal .group-list > .body-row:last-child{
+    border-bottom: 0px solid #434547;
+}
 
 .modal .modal-body .userinput{
     margin: 19px auto 0 auto;
@@ -469,8 +511,28 @@ header > div.menu .menu-item:last-child{
 .pb0{
     padding-bottom: 0px !important;
 }
-
 .mhz40{
     margin-left: 40px !important;
     margin-right: 40px !important;
+}
+.pt12{
+    padding-top: 12px !important;
+}
+.mt27{
+    margin-top: 27px !important;
+}
+.mt70{
+    margin-top: 70px !important;
+}
+.tc{
+    text-align: center !important;
+}
+.lh16{
+    line-height: 16px !important;
+}
+.text-to-bottom{
+    display: inline-block;
+    border-bottom: 1px solid #966220;
+    padding-bottom: 6px;
+
 }
