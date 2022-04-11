@@ -146,6 +146,7 @@ header > div.menu .menu-item:last-child{
     box-sizing: border-box;
     border-radius: 8px;
     margin: 0;
+    margin-bottom: 100px;
 }
 .doc-history .doc-history-row {
     padding: 0px 30px;
