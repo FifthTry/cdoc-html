@@ -38,11 +38,11 @@
 
             <!--breadcrumb:start-->
             <nav class="breadcrumb">
-                <a href="#" class="main-cta-primary-base"><span class="iconify main-text" data-icon="octicon:repo-16"></span>Orgname</a>
+                <a href="#" class="main-cta-primary-base"><span class="iconify main-text" data-icon="octicon:repo-16"></span>Acme</a>
                 <div class="repo">
                     <span class="iconify main-text" data-icon="octicon:link-16"></span>
-                    <a href="#" class="repo-item main-cta-primary-base">Code Repo</a>
-                    <a href="#" class="repo-item main-cta-primary-base">Doc Repo</a>
+                    <a href="#" class="repo-item main-cta-primary-base">acme/mono-repo</a>
+                    <a href="#" class="repo-item main-cta-primary-base">acme/documentation</a>
                 </div>
                 <a href="#" class="main-text-strong">
                     <span class="iconify main-text" data-icon="octicon:git-pull-request-16"></span>Pull requests</a>
@@ -112,8 +112,12 @@
                             <a href="#" class="cell-item main-text-strong"><span class="iconify" data-icon="octicon:note-16"></span>#404 Doc PR name</a>
                         </div>
                     </div>
-                    <div class="row-right">
-                        <a href="#" class="approved main-success-text">Approved</a>
+                    <div class="row-right visible hide-on-approval">
+                        <a href="#" class="cta cta-primary open-get-approval">Approve</a>
+                    </div>
+                    <div class="row-right hidden show-on-approval">
+
+                        <a href="#" class="approved main-success-text"> <span class="iconify" data-icon="octicon:check-24"></span> Approved</a>
                         <div class="user main-text">
                            by <a href="#" class="username main-text">@sharmashobit</a> 20 min ago
                         </div>
@@ -225,7 +229,7 @@
                                 </div>
 
                                 <div class="body-row cta-row">
-                                    <a href="#" class="cta cta-warning open-confirm-part1">Confirm</a>
+                                    <a href="#" class="cta cta-warning show-approved-state">Confirm</a>
                                 </div>
 
                                 <div class="body-row caption main-text">
@@ -246,7 +250,8 @@
                         <div class="modal-dialog pb0">
                             <div class="modal-title main-text-strong">
                                 Are you sure?
-                                <span class="close"><span class="iconify" data-icon="ep:close-bold"></span></span>
+                                <span class="close main-text"><span class="iconify" data-icon="octicon:x-16"></span></span>
+                                <span class="goback back-to-attach-documentation main-text"><span class="iconify" data-icon="octicon:arrow-left-24"></span></span>
                             </div>
 
                             <div class="modal-body mt12 pt0 pb22 mhz40">
@@ -270,7 +275,7 @@
                                 </div>
 
                                 <div class="body-row cta-row">
-                                    <a href="#" class="cta cta-warning open-confirm-part2">Confirm</a>
+                                    <a href="#" class="cta cta-warning">Confirm</a>
                                 </div>
 
 
@@ -288,7 +293,8 @@
                         <div class="modal-dialog pb0">
                             <div class="modal-title main-text-strong">
                                 Are you sure?
-                                <span class="close"><span class="iconify" data-icon="ep:close-bold"></span></span>
+                                <span class="close main-text"><span class="iconify" data-icon="octicon:x-16"></span></span>
+                                <span class="goback back-confirm-part2 main-text"><span class="iconify" data-icon="octicon:arrow-left-24"></span></span>
                             </div>
 
                             <div class="modal-body mt12 pt0 pb22">
@@ -308,7 +314,7 @@
                                 </div>
 
                                 <div class="body-row cta-row">
-                                    <a href="#" class="cta cta-warning close-confirm-part2">Confirm</a>
+                                    <a href="#" class="cta cta-warning">Confirm</a>
                                 </div>
 
 
@@ -327,7 +333,7 @@
                         <div class="modal-dialog large-dialog pb0">
                             <div class="modal-title main-text-strong">
                                 Attach Code PR
-                                <span class="close"><span class="iconify" data-icon="ep:close-bold"></span></span>
+                                <span class="close main-text"><span class="iconify" data-icon="octicon:x-16"></span></span>
                             </div>
 
                             <div class="modal-body pt12">
@@ -358,7 +364,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -372,7 +378,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -386,7 +392,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -400,7 +406,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                <a href="#" class="cta cta-primary">Connect</a>
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -414,14 +420,14 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
                                     </div>
                                 </div>
                                 <div class="body-row mt70 tc main-warning-base lh16">
-                                    <div class="text-to-bottom"><a href="#" class="main-warning-base">My PR doesnt need a connection</a></div>
+                                    <div class="text-to-bottom"><a href="#" class="main-warning-base open-con open-confirm-part2">This code change doesn't need documentation</a></div>
                                 </div>
                             </div>
                         </div>
@@ -438,7 +444,7 @@
                         <div class="modal-dialog large-dialog pb0">
                             <div class="modal-title main-text-strong">
                                 Attach Documentation
-                                <span class="close"><span class="iconify" data-icon="ep:close-bold"></span></span>
+                                <span class="close"><span class="iconify" data-icon="octicon:x-16"></span></span>
                             </div>
 
                             <div class="modal-body pt12">
@@ -469,7 +475,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -483,7 +489,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -497,7 +503,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -511,7 +517,7 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                <a href="#" class="cta cta-primary">Connect</a>
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
@@ -525,14 +531,14 @@
                                                 </div>
                                             </div>
                                             <div class="row-right">
-                                                
+                                                <a href="#" class="cta cta-primary hidden connect">Connect</a>
                                             </div>
                                         </div>
                                         <!--Row-->
                                     </div>
                                 </div>
                                 <div class="body-row mt70 tc main-warning-base lh16">
-                                    <div class="text-to-bottom"><a href="#" class="main-warning-base">My PR doesnt need a connection</a></div>
+                                    <div class="text-to-bottom"><a href="#" class="main-warning-base open-confirm-part1">This code change doesn't need documentation/a></div>
                                 </div>
                             </div>
                         </div>
@@ -543,29 +549,44 @@
         </div>
     </div>
 
-
 <!--SCRIPTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
-    $(".cell-item").click(function(){
+    $(".open-get-approval").click(function(){
         $(".get-approval").addClass('opened');
     });
-    $(".close,.close-confirm-part2").click(function(){
+    $(".close").click(function(){
         $(".modal").removeClass('opened');
     });
     $(".open-confirm-part1").click(function(){
-        $(".get-approval").removeClass('opened');
+        $(".attach-documentation").removeClass('opened');
         $(".confirm-part1").addClass("opened");
     });
     $(".open-confirm-part2").click(function(){
-        $(".confirm-part1").removeClass("opened");
+        $(".attach-code-pr").removeClass("opened");
         $(".confirm-part2").addClass("opened");
+    });
+    $(".back-confirm-part2").click(function(){
+        $(".confirm-part2").removeClass("opened");
+        $(".attach-code-pr").addClass("opened");
     });
     $(".open-attach-code-pr").click(function(){
         $(".attach-code-pr").addClass("opened");
     });
     $(".open-attach-documentation").click(function(){
         $(".attach-documentation").addClass("opened");
+    });
+    $(".open-attach-documentation").click(function(){
+        $(".attach-documentation").addClass("opened");
+    });
+    $(".back-to-attach-documentation").click(function(){
+        $(".attach-documentation").addClass("opened");
+        $(".confirm-part1").removeClass("opened")
+    });
+    $(".show-approved-state").click(function(){
+        $(".show-on-approval").show();
+        $(".hide-on-approval").hide();
+        $(".get-approval").removeClass("opened");
     });
 
 </script>
