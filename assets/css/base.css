@@ -327,7 +327,7 @@ header > div.menu .menu-item:last-child{
     padding: 12px 0;
 }
 .modal .modal-dialog.large-dialog{
-    min-width: 961px;
+    /*min-width: 961px;*/
 }
 .modal.warning .modal-dialog{
     background: #141414;
@@ -550,8 +550,8 @@ header > div.menu .menu-item:last-child{
 .mt27{
     margin-top: 27px !important;
 }
-.mt70{
-    margin-top: 70px !important;
+.mt40{
+    margin-top: 40px !important;
 }
 .tc{
     text-align: center !important;
