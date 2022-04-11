@@ -193,9 +193,11 @@ header > div.menu .menu-item:last-child{
     top: 14px;
 }
 .cell-group a{
-    display: block;
+    display: inline-block;
     font-size: 16px;
     line-height: 20px;
+    width: 100%;
+    vertical-align: middle;
 }
 
 .cell-group a.item-top{
@@ -210,7 +212,13 @@ header > div.menu .menu-item:last-child{
 .cell-group .cell-item .iconify{
     margin-right: 5px;
     font-size: 16px;
-    vertical-align: middle;
+    vertical-align: inherit;
+    line-height: 16px;
+    margin-top: -2px;
+}
+.cell-group a:last-child .iconify{
+        line-height: 20px;
+
 }
 .cell-group.no-bracket .cell-item .iconify{
     margin-right: 16px;
